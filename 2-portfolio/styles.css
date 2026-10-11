@@ -33,10 +33,9 @@ body {
 }
 
 .gallery {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+  justify-items: center;
   gap: 0;
   max-width: 1000px;
   margin: 0 auto;
@@ -51,11 +50,12 @@ body {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  margin: 20px;
 }
 
 .card:hover {
-  transform: translateY(0);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 5px 5px 25px 1px rgba(0, 0, 0, 0.22);
 }
 
 .card img {
@@ -76,7 +76,7 @@ body {
 
 .tags {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
   margin-bottom: 14px;
 }
